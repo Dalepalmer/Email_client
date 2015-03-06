@@ -7,9 +7,8 @@ Email.NewEmailController = Ember.ObjectController.extend({
         subject: this.get('title'),
         body: this.get('body')
       });
-      console.log(newEmail)
       newEmail.save();
-      this.transitionToRoute('emails');
+      this.transitionToRoute('email');
     }
   }
 });

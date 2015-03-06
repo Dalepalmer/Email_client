@@ -1,5 +1,6 @@
 <h2>Craft your message here</h2>
 <form>
+    {{#each emails itemcontroller="new-email"}}
   <div class="form-group">
     <label for="recipient">Recipient</label>
     {{input value=recipient id="recipient" class="form-control"}}
@@ -14,6 +15,6 @@
     <label for="body">Body</label>
     {{textarea value=body id="body" class="form-control" rows="15"}}
   </div>
-
+  {{/each}}
   <button class="btn btn-primary" {{action 'send'}}>Send</button>
 </form>
