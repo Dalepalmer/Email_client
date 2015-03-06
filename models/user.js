@@ -1,0 +1,5 @@
+Email.User = DS.Model.extend({
+  username: DS.attr(),
+  password: DS.attr(),
+  emails: DS.hasMany('email', {async: true})
+});

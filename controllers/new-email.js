@@ -1,4 +1,5 @@
 Email.NewEmailController = Ember.ObjectController.extend({
+  needs: ['user'],
   actions: {
     send: function() {
       var newEmail = this.store.createRecord('email', {

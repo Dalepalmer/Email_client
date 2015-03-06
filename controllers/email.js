@@ -1,8 +1,9 @@
-OregonOrgans.OrganController = Ember.ObjectController.extend({
+Email.EmailController = Ember.ObjectController.extend({
   actions: {
     delete: function() {
-      if (confirm('Is this organ no longer good?')) {
+      if (confirm('Are you sure you want to delete this email?')) {
         this.get('model').destroyRecord();
       }
     }
-  });
+  }
+});
