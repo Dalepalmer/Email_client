@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doodle Email Client</title>
+
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <script src="libs/jquery-1.11.1.js"></script>
+  <script src="libs/ember-template-compiler-1.10.0.js"></script>
+  <script src="libs/ember-1.10.0.debug.js"></script>
+  <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+  <script src="libs/ember-data-1.0.0-beta.15.js"></script>
+  <script src="libs/localstorage-adapter-0.5.1.js"></script>
+
+  <script src="email.js"></script>
+  <script src="store.js"></script>
+  <script src="router.js"></script>
+
+
+  <script src="controllers/home.js"></script>
+  <script src="controllers/new-email.js"></script>
+  <!-- // <script src="controllers/new-comment.js"></script>
+  // <script src="controllers/comment.js"></script> -->
+
+  <script src="routes/new-email.js"></script>
+  <script src="routes/home.js"></script>
+  <!-- // <script src="routes/recent-comments.js"></script>
+  // <script src="routes/new-comment.js"></script> -->
+
+  <script src="models/email.js"></script>
+  <!-- // <script src="models/comment.js"></script> -->
+
+  <script>
+  EmberHandlebarsLoader.loadTemplates([
+     'application', 'home', 'emails', 'new-email' ]);
+    </script>
+  </head>
+  <body>
+
+  </body>
+  </html>

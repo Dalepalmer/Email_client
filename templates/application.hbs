@@ -1,0 +1,13 @@
+<div class='container'>
+  <nav class='navbar navbar-default' role='navigation'>
+    <ul class='nav navbar-nav'>
+      <li>{{#link-to 'home'}}Home{{/link-to}}</li>
+      <li>{{#link-to 'emails'}}Email{{/link-to}}</li>
+      <li>{{#link-to 'new-email'}}Send{{/link-to}}</li>
+    </ul>
+  </nav>
+
+  <div class="jumbotron">
+    {{outlet}}
+  </div>
+</div>
