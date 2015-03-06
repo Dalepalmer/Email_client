@@ -1,0 +1,8 @@
+<h1> Here are your messages! </h1>
+<ul>
+  {{#each email in email}}
+    <p>{{email.recipient}}</p>
+    <p>{{email.subect}}</p>
+    <p>{{email.body}}</p>
+  {{/each}}
+</ul>
