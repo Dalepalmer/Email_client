@@ -1,8 +1,16 @@
 <h1> Here are your messages! </h1>
+<div class="container">
 <ul>
-  {{#each email in emails}}
-    <p>{{email.recipient}}</p>
-    <p>{{email.subject}}</p>
-    <p>{{email.body}}</p>
+  {{#each email in model}}
+  <div class="jumbotron">
+  <p>Recipient: {{email.recipient}}</p>
+  <p>Subject: {{email.subject}}</p>
+  <button class="btn-xs btn-success" {{action 'show'}}>Expand Email</button>
+  {{#if isShowing}}
+  <p>Body: {{email.body}}</p>
+  <button class="btn-xs btn-warning" {{action 'hide'}}>Hide Email</button>
+  {{/if}}
+  </div>
   {{/each}}
 </ul>
+</div>

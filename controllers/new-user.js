@@ -1,13 +1,14 @@
-Email.NewUserController = Ember.ObjectController.extend({
+Email.NewEmailController = Ember.ObjectController.extend({
   actions: {
-    createUser: function() {
-      var newUser = this.store.createRecord('user', {
-        username: this.get('username'),
-        password: this.get('password'),
-      });
+    save: function() {
+      var c = this.get('model');
+      comment.save();
 
-      newUser.save();
-      this.transitionToRoute('email');
+      var controller = this;
+      comment.get('post').then(function(post) {
+        post.save();
+        controller.transitionToRoute('post', post);
+      });
     }
   }
 });
